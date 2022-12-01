@@ -1,0 +1,132 @@
+\input texinfo
+@setfilename 3DViewer.info
+@documentencoding koi8-r
+@settitle 3DViewerTex
+
+@center @b{3DViewer}
+@image{src/main}
+@enumerate 
+@item Зона отображения объекта
+@item Меню управления программой
+@item Меню управления объектами
+@end enumerate
+
+@image{src/file}
+@enumerate 
+@item Добавление новой модели в зону отображения
+@item Сохранить полученное изображение в формате:
+@enumerate 4
+@item jpeg
+@item bmp
+@item gif
+@end enumerate
+@end enumerate
+
+@image{src/Model1}
+@image{src/Model2}
+@image{src/Model3}
+
+@enumerate
+@item Контекстное меню настроек ребер
+    @enumerate 2
+    @item Выбор типа отображения ребер
+        @enumerate 3
+        @item Не отображать
+        @item Отображать в виде линий
+        @item Отображать пунктиром
+        @end enumerate
+    @end enumerate
+@enumerate 6
+    @item Изменить размер ребер
+    @item Изменить цвет ребер
+@end enumerate
+@end enumerate
+
+
+@enumerate 8
+@item Контекстное меню настроек вершин
+    @enumerate 9
+    @item Выбор способа отображения вершин
+        @enumerate 10
+        @item Не отображать
+        @item Отображать в форме круга
+        @item Отображать в форме квадрата
+        @end enumerate
+    @end enumerate
+    @enumerate 13
+    @item Изменить размер ребер
+    @item Изменить цвет ребер
+    @end enumerate
+@end enumerate
+
+@enumerate 15
+@item Контекстное меню настроек текстур
+    @enumerate 16
+    @item Выбор способа отображения текстур
+        @enumerate 17
+        @item Не отображать текстуры
+        @item Отображать только ребра
+        @item Отображать текстуры полностью
+        @end enumerate
+    @end enumerate
+@end enumerate
+
+@image{src/Scene}
+@enumerate
+@item Изменение цвета сцены
+@item Извенение света на сцене
+@item Контекстное меню выбора проекции
+    @enumerate 5
+    @item Выбрать центральную проекцию
+    @item Выбрать параллельную проекцию
+    @end enumerate
+@end enumerate
+
+@image{src/choise}
+@enumerate
+@item Скроллбар для задания ширины линии
+@item Текущий вид линии
+@item Применить настройку
+@item Отменить изменение настройки
+@end enumerate
+
+@image{src/Transform}
+
+@enumerate
+@item Блок перемещения модели
+    @enumerate
+    @item Сместить влево 
+    @item Сместить вверх
+    @item Сместить вниз
+    @item Сместить вправо
+    @item Отдалить
+    @item Приблизить
+    @item Величина смещения в пространстве по оси X
+    @item Величина смещения в пространстве по оси Y
+    @item Величина смещения в пространстве по оси Z
+    @item Шаг смещения по осям
+    @end enumerate
+@item Блок вращения модели
+    @enumerate
+    @item Поворот объекта по оси X
+    @item Поворот объекта по оси Y
+    @item Поворот объекта по оси Z
+    @end enumerate
+@item Блок масштабирования модели
+    @enumerate
+    @item Масштаб по оси X
+    @item Масштаб по оси X
+    @item Масштаб по оси X
+    @item Масштаб по всем осям
+    @end enumerate
+@end enumerate
+
+@image{src/Objtree}
+@enumerate
+@item Название объекта
+@item Нормализировать выбранный объект
+@item Сфокусировать камеру на выбранный объект
+@item Удалить объект
+@end enumerate
+
+@bye

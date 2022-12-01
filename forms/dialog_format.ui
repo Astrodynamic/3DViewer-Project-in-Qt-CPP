@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_format</class>
+ <widget class="QDialog" name="Dialog_format">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>222</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Save as . . .</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="5" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="format_cbx">
+     <item>
+      <property name="text">
+       <string>JPEG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BMP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PNG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GIF</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Укажите размер
+изображения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Укажите формат</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Сохранить текущее изображение?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QSpinBox" name="width_sbx">
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="prefix">
+        <string>width: </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>1920</number>
+       </property>
+       <property name="value">
+        <number>1920</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="height_sbx">
+       <property name="prefix">
+        <string>height: </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>1440</number>
+       </property>
+       <property name="value">
+        <number>1440</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="resolution_cbx">
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Использовать текущий размер приложения</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1920x1440</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1920x1200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1920x1080</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1680x1050</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1600x900</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1536x864</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1440x900</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1366x768</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1280x1024</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1280x720</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1280x800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1024x768</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>800x600</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Или</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Выберите
+стандартный размер</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog_format</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog_format</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
