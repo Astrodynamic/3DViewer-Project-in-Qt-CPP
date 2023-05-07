@@ -119,7 +119,7 @@ The Viewer3D project is licensed under the [MIT License](LICENSE). This means th
 
 <img src="data/image/changevertex.png">
 <hr>
-<h2 align="center"> Примеры: </h2>
+<h2 align="center"> Examples: </h2>
 
 | Edge display method |  | Fin thickness |  | Rib color |  |
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -162,29 +162,27 @@ The Viewer3D project is licensed under the [MIT License](LICENSE). This means th
 <hr>
 <h2 align="center"> Examples: </h2>
 
-| `Желтый цвет сцены` | `Зеленый цвет сцены` |
+| `Stage yellow` | `Stage green` |
 | :---: | :---: | 
 | <img src="data/image/noskybox.png"> | <img src="data/image/greenscene.png"> |
 
-| `Плоское затенение` | `Мягкое затенение` |
+| `Flat shading` | `Soft shading` |
 | :---: | :---: | 
 | <img src="data/image/hardlight.png"> | <img src="data/image/softlight.png"> |
 
-| `Центральная проекция` | `Параллельная проекция` |
+| `Central projection` | `Parallel Projection` |
 | :---: | :---: | 
 | <img src="data/image/centralprojection.png"> | <img src="data/image/parallelprojection.png"> |
 
-| `Отображать сетку` | `Сетка none` |
+| `Show grid` | `Grid none` |
 | :---: | :---: | 
 | <img src="data/image/centralprojection.png"> | <img src="data/image/nogrid.png"> |
 
-| `Отображать окружение` | `Окружение none` |
+| `Display environment` | `Environment none` |
 | :---: | :---: | 
 | <img src="data/image/centralprojection.png"> | <img src="data/image/noskybox.png"> |
 
-<hr><hr>
-
-<h2 align="center"> Область управления объектом </h2>
+<hr>
 
 <h2 align="center"> Object Control Area </h2>
 
@@ -195,23 +193,23 @@ The Viewer3D project is licensed under the [MIT License](LICENSE). This means th
         1-2. Offset along X-axis <br>
         3-4. Offset along Y-axis <br>
         5-6. Offset along Z-axis <br>
-        7. Offset step <br>
-        8. Current coordinate on X-axis <br>
-        9. Current coordinate on Y-axis <br>
-        10. Current coordinate on Z-axis <br>
-        11. Rotation around X-axis <br>
-        12. Rotation around Y-axis <br>
-        13. Rotation around Z-axis <br>
-        14. Proportional model scaling along X-axis <br>
-        15. Proportional model scaling along Y-axis <br>
-        16. Proportional model scaling along Z-axis <br>
-        17. Proportional model scaling along all axes simultaneously <br>
-        18. Scales object dimensions to unity size <br>
-        19. Focuses camera on selected object <br>
-        20. When selecting the scene, user will modify parameters of all objects <br>
-        21. When selecting a specific object, user will modify parameters of that object <br>
-        22. When selecting a specific part of an object, user can only modify materials for that part <br>
-        23. Clicking the remove field next to an object removes it from the scene
+        1. Offset step <br>
+        2. Current coordinate on X-axis <br>
+        3. Current coordinate on Y-axis <br>
+        4.  Current coordinate on Z-axis <br>
+        5.  Rotation around X-axis <br>
+        6.  Rotation around Y-axis <br>
+        7.  Rotation around Z-axis <br>
+        8.  Proportional model scaling along X-axis <br>
+        9.  Proportional model scaling along Y-axis <br>
+        10. Proportional model scaling along Z-axis <br>
+        11. Proportional model scaling along all axes simultaneously <br>
+        12. Scales object dimensions to unity size <br>
+        13. Focuses camera on selected object <br>
+        14. When selecting the scene, user will modify parameters of all objects <br>
+        15. When selecting a specific object, user will modify parameters of that object <br>
+        16. When selecting a specific part of an object, user can only modify materials for that part <br>
+        17. Clicking the remove field next to an object removes it from the scene
     <p></td>
 </tr>
 </table>
