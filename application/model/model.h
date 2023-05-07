@@ -46,7 +46,7 @@ class Model : public QObject {
   void Error(QString);
 
  private:
-  Model(QString path);
+  explicit Model(QString path);
   ~Model();
 
   ModelSettings m_settings_;

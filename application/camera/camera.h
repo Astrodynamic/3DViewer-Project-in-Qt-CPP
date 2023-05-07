@@ -43,7 +43,7 @@ class Camera {
  private:
   void UpdateCameraVectors();
 
-       float Angle2D(QVector2D v_1, QVector2D v_2) const;
+  float Angle2D(QVector2D v_1, QVector2D v_2) const;
 };
 
 }  // namespace s21

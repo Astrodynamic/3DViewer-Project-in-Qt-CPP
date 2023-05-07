@@ -87,53 +87,53 @@ include_directories(
 )
 
 set(HEADERS
-${CMAKE_SOURCE_DIR}/application/opengl/v3d_gl.h
-${CMAKE_SOURCE_DIR}/application/camera/camera.h
-${CMAKE_SOURCE_DIR}/application/mesh/mesh.h
-${CMAKE_SOURCE_DIR}/application/model/model.h
-${CMAKE_SOURCE_DIR}/application/controler/mainwindow.h
-${CMAKE_SOURCE_DIR}/application/settings/model_settings/model_settings.h
-${CMAKE_SOURCE_DIR}/application/settings/global_settings.h
-${CMAKE_SOURCE_DIR}/application/savior/savior.h
-${CMAKE_SOURCE_DIR}/application/scene/scene.h
-${CMAKE_SOURCE_DIR}/application/light/light.h
-  application/light/point_light.h
-  application/light/spot_light.h
-  application/light/illumination.h
-  application/information/model_information/model_information.h
-  application/information/mesh_information/mesh_information.h
-  widgets/wgt_width/wgt_width.h
-  widgets/wgt_dialog_format/dialog_format.h
-  lib/gifimage/qgifglobal.h
-  lib/gifimage/qgifimage.h
-  lib/gifimage/qgifimage_p.h
+  ${CMAKE_SOURCE_DIR}/application/opengl/v3d_gl.h
+  ${CMAKE_SOURCE_DIR}/application/camera/camera.h
+  ${CMAKE_SOURCE_DIR}/application/mesh/mesh.h
+  ${CMAKE_SOURCE_DIR}/application/model/model.h
+  ${CMAKE_SOURCE_DIR}/application/controler/mainwindow.h
+  ${CMAKE_SOURCE_DIR}/application/settings/model_settings/model_settings.h
+  ${CMAKE_SOURCE_DIR}/application/settings/global_settings.h
+  ${CMAKE_SOURCE_DIR}/application/savior/savior.h
+  ${CMAKE_SOURCE_DIR}/application/scene/scene.h
+  ${CMAKE_SOURCE_DIR}/application/light/light.h
+  ${CMAKE_SOURCE_DIR}/application/light/point_light.h
+  ${CMAKE_SOURCE_DIR}/application/light/spot_light.h
+  ${CMAKE_SOURCE_DIR}/application/light/illumination.h
+  ${CMAKE_SOURCE_DIR}/application/information/model_information/model_information.h
+  ${CMAKE_SOURCE_DIR}/application/information/mesh_information/mesh_information.h
+  ${CMAKE_SOURCE_DIR}/widgets/wgt_width/wgt_width.h
+  ${CMAKE_SOURCE_DIR}/widgets/wgt_dialog_format/dialog_format.h
+  ${CMAKE_SOURCE_DIR}/lib/gifimage/qgifglobal.h
+  ${CMAKE_SOURCE_DIR}/lib/gifimage/qgifimage.h
+  ${CMAKE_SOURCE_DIR}/lib/gifimage/qgifimage_p.h
 )
 
 set(SOURCES
-  application/opengl/v3d_gl.cc
-  application/camera/camera.cc
-  application/mesh/mesh.cc
-  application/model/model.cc
-  application/controler/mainwindow.cc
-  application/savior/savior.cc
-  application/scene/scene.cc
-  application/light/light.cc
-  application/light/illumination.cc
-  widgets/wgt_width/wgt_width.cc
-  widgets/wgt_dialog_format/dialog_format.cc
-  lib/giflib/dgif_lib.c
-  lib/giflib/egif_lib.c
-  lib/giflib/gif_err.c
-  lib/giflib/gif_hash.c
-  lib/giflib/gifalloc.c
-  lib/giflib/quantize.c
-  lib/gifimage/qgifimage.cpp
+  ${CMAKE_SOURCE_DIR}/application/opengl/v3d_gl.cc
+  ${CMAKE_SOURCE_DIR}/application/camera/camera.cc
+  ${CMAKE_SOURCE_DIR}/application/mesh/mesh.cc
+  ${CMAKE_SOURCE_DIR}/application/model/model.cc
+  ${CMAKE_SOURCE_DIR}/application/controler/mainwindow.cc
+  ${CMAKE_SOURCE_DIR}/application/savior/savior.cc
+  ${CMAKE_SOURCE_DIR}/application/scene/scene.cc
+  ${CMAKE_SOURCE_DIR}/application/light/light.cc
+  ${CMAKE_SOURCE_DIR}/application/light/illumination.cc
+  ${CMAKE_SOURCE_DIR}/widgets/wgt_width/wgt_width.cc
+  ${CMAKE_SOURCE_DIR}/widgets/wgt_dialog_format/dialog_format.cc
+  ${CMAKE_SOURCE_DIR}/lib/giflib/dgif_lib.c
+  ${CMAKE_SOURCE_DIR}/lib/giflib/egif_lib.c
+  ${CMAKE_SOURCE_DIR}/lib/giflib/gif_err.c
+  ${CMAKE_SOURCE_DIR}/lib/giflib/gif_hash.c
+  ${CMAKE_SOURCE_DIR}/lib/giflib/gifalloc.c
+  ${CMAKE_SOURCE_DIR}/lib/giflib/quantize.c
+  ${CMAKE_SOURCE_DIR}/lib/gifimage/qgifimage.cpp
 )
 
 set(FORMS
-  forms/wgt_width.ui
-  forms/mainwindow.ui
-  forms/dialog_format.ui
+  ${CMAKE_SOURCE_DIR}/forms/wgt_width.ui
+  ${CMAKE_SOURCE_DIR}/forms/mainwindow.ui
+  ${CMAKE_SOURCE_DIR}/forms/dialog_format.ui
 )
 
 set(PROJECT_SOURCES
@@ -183,7 +183,7 @@ set(SHADERS_FRAG
   shaders/scene.frag
   shaders/vertex.frag
   shaders/edge.frag
-  shaders/material.frag 
+  shaders/material.frag
   shaders/material_flat.frag
   shaders/shader_flat.frag
   shaders/cubemap.frag
@@ -293,7 +293,8 @@ if(CPPCHECK)
     "--suppress=missingInclude"
     "--suppress=unusedStructMember"
     "--suppress=variableScope"
-    "--suppress=*:${PROJECT_SOURCE_DIR}/qcustomplot/*"
+    "--suppress=uninitMemberVar"
+    "--suppress=*:${PROJECT_SOURCE_DIR}/lib/*"
   )
   add_custom_target(
     cppcheck

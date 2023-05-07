@@ -27,13 +27,13 @@
 #include <QtGlobal>
 
 #if !defined(QT_STATIC) && !defined(GIFIMAGE_NO_LIB)
-#  if defined(QT_BUILD_GIFIMAGE_LIB)
-#    define Q_GIFIMAGE_EXPORT Q_DECL_EXPORT
-#  else
-#    define Q_GIFIMAGE_EXPORT Q_DECL_IMPORT
-#  endif
+#if defined(QT_BUILD_GIFIMAGE_LIB)
+#define Q_GIFIMAGE_EXPORT Q_DECL_EXPORT
 #else
-#  define Q_GIFIMAGE_EXPORT
+#define Q_GIFIMAGE_EXPORT Q_DECL_IMPORT
+#endif
+#else
+#define Q_GIFIMAGE_EXPORT
 #endif
 
-#endif // QGIFGLOBAL_H
+#endif  // QGIFGLOBAL_H

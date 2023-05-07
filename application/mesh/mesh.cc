@@ -28,7 +28,7 @@ MeshInfo Mesh::GetInfo() const { return info; }
 
 Material &Mesh::GetMaterial() { return material; }
 
-void Mesh::ChangeTexture(QImage img, QString &path) {
+void Mesh::ChangeTexture(QImage img, const QString &path) {
   QImage data(1, 1, QImage::Format_RGB32);
   data.fill(Qt::black);
   for (auto &it : textures) {

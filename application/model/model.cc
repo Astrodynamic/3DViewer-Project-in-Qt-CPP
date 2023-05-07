@@ -330,9 +330,8 @@ void Model::LoadTextureData(const aiScene *scene, aiMesh *mesh,
   if (material->GetTextureCount(aiTextureType_AMBIENT)) {
     QVector<Texture *> ambientMaps = LoadMaterialTextures(
         material, aiTextureType_AMBIENT, "texture_ambient");
-    for (auto &it : ambientMaps) {
-      textures.push_back(it);
-    }
+    std::copy(ambientMaps.begin(), ambientMaps.end(),
+              std::back_inserter(textures));
   } else {
     Texture *texture = new Texture;
     QImage data(1, 1, QImage::Format_RGB32);
@@ -347,9 +346,8 @@ void Model::LoadTextureData(const aiScene *scene, aiMesh *mesh,
   if (material->GetTextureCount(aiTextureType_DIFFUSE)) {
     QVector<Texture *> diffuseMaps = LoadMaterialTextures(
         material, aiTextureType_DIFFUSE, "texture_diffuse");
-    for (auto &it : diffuseMaps) {
-      textures.push_back(it);
-    }
+    std::copy(diffuseMaps.begin(), diffuseMaps.end(),
+              std::back_inserter(textures));
   } else {
     Texture *texture = new Texture;
     QImage data(1, 1, QImage::Format_RGB32);
@@ -364,9 +362,8 @@ void Model::LoadTextureData(const aiScene *scene, aiMesh *mesh,
   if (material->GetTextureCount(aiTextureType_SPECULAR)) {
     QVector<Texture *> specularMaps = LoadMaterialTextures(
         material, aiTextureType_SPECULAR, "texture_specular");
-    for (auto &it : specularMaps) {
-      textures.push_back(it);
-    }
+    std::copy(specularMaps.begin(), specularMaps.end(),
+              std::back_inserter(textures));
   } else {
     Texture *texture = new Texture;
     QImage data(1, 1, QImage::Format_RGB32);
@@ -381,9 +378,8 @@ void Model::LoadTextureData(const aiScene *scene, aiMesh *mesh,
   if (material->GetTextureCount(aiTextureType_HEIGHT)) {
     QVector<Texture *> heightMaps =
         LoadMaterialTextures(material, aiTextureType_HEIGHT, "texture_normal");
-    for (auto &it : heightMaps) {
-      textures.push_back(it);
-    }
+    std::copy(heightMaps.begin(), heightMaps.end(),
+              std::back_inserter(textures));
   }
 }
 

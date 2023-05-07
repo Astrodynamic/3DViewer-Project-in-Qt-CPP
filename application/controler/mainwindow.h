@@ -53,7 +53,7 @@ class MainWindow : public QMainWindow {
   void on_menu_projection_type_triggered(QAction *);
 
   void on_menu_skybox_type_triggered(QAction *);
-  void on_menu_grid_type_triggered(QAction *s);
+  void on_menu_grid_type_triggered(QAction *sender);
   void on_menu_light_type_triggered(QAction *);
   void on_menu_surface_type_triggered(QAction *);
 

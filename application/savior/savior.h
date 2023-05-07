@@ -61,7 +61,7 @@ class Savior : public QWidget {
 class GifToThread : public QObject, public QGifImage {
   Q_OBJECT
  public:
-  GifToThread(QBuffer &);
+  explicit GifToThread(QBuffer &);
 
  private:
   void SetDurationGif();

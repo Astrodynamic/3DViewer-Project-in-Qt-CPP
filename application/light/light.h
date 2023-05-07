@@ -12,10 +12,10 @@ namespace s21 {
 class Light {
  public:
   Light();
-  const bool &isActive() { return m_active_; }
+  const bool &isActive() const { return m_active_; }
   void SetActive(const bool status) { m_active_ = status; }
 
-  const QString &GetType() { return m_type_; }
+  const QString &GetType() const { return m_type_; }
   QMap<QString, QVariant> &GetInfo() { return lightData; }
 
  protected:
