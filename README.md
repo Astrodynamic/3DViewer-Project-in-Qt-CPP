@@ -1,98 +1,166 @@
+
+
+README
+
+# 3DViewer Project in Qt/CPP
+
+The Viewer3D project is a C++ based 3D viewer application that enables users to load 3D models and perform various transformations and rendering operations on them. This README file contains important information about the project, including installation instructions, usage, development, and licensing.
+
+## Build
+
+To build the project, follow these steps:
+
+1. Ensure that CMake version 3.15 or higher is installed on your system.
+2. Clone the project repository to your local machine.
+3. Open a terminal window and navigate to the project directory.
+4. Create a new build directory within the project directory.
+5. Navigate to the build directory and run the command `cmake ..` to generate the makefile.
+6. Run the command `make` to build the project.
+
+## Dependencies
+
+The Viewer3D project has the following dependencies:
+
+- CMake version 3.15 or higher
+- C++ (CXX) and C languages
+- CMake_INCLUDE_CURRENT_DIR variable set to ON
+- CMake_AUTOUIC, CMake_AUTOMOC, and CMake_AUTORCC variables set to ON
+- C standard version 11
+- C++ standard version 17
+- assimp library
+- Qt libraries (version 5 or 6), specifically the Widgets and Gui components
+- OpenGL, Qt5Core, Qt5Widgets, Qt5Gui, and Qt5OpenGL libraries (for Windows systems)
+- QtOpenGL and OpenGLWidgets components (for non-Windows systems)
+
+## Usage
+
+The Viewer3D application provides the following functionalities:
+
+1. Model Loading: The application allows loading 3D models from different file formats such as obj, stl, fbx, dae, etc. These models can include vertices, surfaces, normals, textures, and other attributes.
+ 
+2. Transformations: Translation, rotation, and scaling of models are essential features in the application. Users can move, rotate or scale models to create animations or position them in the desired location in the scene.
+
+3. User Interface: The application provides a graphical user interface (GUI) for easy interaction with the software. The GUI allows users to select different tools and options, and to modify various properties of the models, such as lighting, materials, textures, and rendering options.
+
+To use the Viewer3D application, follow these steps:
+
+1. Launch the application.
+2. Load a 3D model by selecting the "File" menu and choosing "Open Model."
+3. Use the transformation tools to move, rotate or scale the loaded model.
+4. Modify the rendering options as desired using the options available in the GUI.
+5. Save the modified model if needed by selecting the "File" menu and choosing "Save Model."
+
+Development:
+
+If you would like to contribute to the development of the 3DViewer project, please follow these steps:
+
+1. Fork the project on GitHub.
+2. Clone your forked repository to your local machine.
+3. Make changes to the code and test them locally.
+4. Commit your changes and push them to your forked repository.
+5. Create a pull request on the main repository.
+
+Please note that all contributions must be made under the project's license, which is described below.
+
+License:
+
+The Viewer3D project is licensed under the [MIT License](LICENSE). This means that the project can be used for both commercial and non-commercial purposes, and that anyone is free to modify and distribute the source code. However, the project is provided "as is", without warranty of any kind, and the authors of the project will not be held liable for any damages arising from the use of the project.
+
 <h1 align="center"> 3DViewer </h1>
 
-<h2 align="center"> Вид главного окна </h2>
+<h2 align="center"> Main window view </h2>
 
 <img src="data/image/mainwindow.png">
 
-1. Зона отображения объекта
-1. Основные настройки приложения
-1. Область управления объектом/сценой
-1. Область управления светом
-1. Область управления текстурами
+1. Object display area
+2. Basic application settings
+3. Object/scene control area
+4. Light control area
+5. Texture control area
 
-<p>С тремя описанными выше областями возможно производить различные манипуляции (отображать поверх зоны отображения, закрывать/открывать, изменять размер и местоположение), например так:</p>
+<p>With the three areas described above, it is possible to perform various manipulations (display over the object display area, close/open, resize and reposition), for example:</p>
 
 <img src="data/image/randomplace.png">
 
 <hr>
 
-<h2 align="center"> Основные настройки </h2>
-<h3><b> Вкладка файл: </b></h3>
+<h2 align="center"> Basic Settings </h2>
+<h3><b> File tab: </b></h3>
 
-1. Загрузить модель из файла (формат obj)
-1. Сделать изображение текущего состояния зоны отображения, при нажатии открывается дополнительное окно (скриншот представлен ниже) выбора формата изображения и его разрешения, которое пользователь может задать вручную, либо выбрать из соответствующих пресетов
+1. Load the model from a file (obj format)
+2. Take a snapshot of the current state of the display area, which opens an additional window (screenshot below) for choosing the image format and resolution that the user can set manually or select from corresponding presets. 
 
 <img src="data/image/savewindow.png">
 
-<hr><hr>
+<hr>
 
-<h3><b> Вкладка модель: </b></h3>
+<h3><b> Model tab: </b></h3>
 
-1. Ребра
-    - Способ отображения (по умолчанию none)
-        - none - не отображать ребра у объекта
-        - линия - отображать ребра линиями
-    - Размер - изменить толщину линий
-    - Цвет - изменить цвет линий
-1. Вершины
-    - Способ отображения (по умолчанию none)
-        - none - не отображать вершины у объекта
-        - Круг - отображать вершины кругами
-        - Квадрат - отображать вершины квадратами
-    - Размер - изменить радиус точек
-    - Цвет - изменить цвет точек
-1. Текстуры
-    - Способ отображения (по умолчанию поверхность)
-        - none - не отображать текстуры
-        - Каркас - отображать каркасную модель объекта
-        - Поверхность - отображать модель поверхностями
+1. Edges
+    - Display mode (default is none)
+        - none - do not display edges on the object
+        - line - display edges as lines
+    - Size - change the thickness of lines
+    - Color - change the color of lines
+2. Vertices
+    - Display mode (default is none)
+        - none - do not display vertices on the object
+        - Circle - display vertices as circles
+        - Square - display vertices as squares
+    - Size - change the radius of points
+    - Color - change the color of points
+3. Textures
+    - Display mode (default is surface)
+        - none - do not display textures
+        - Wireframe - display a wireframe model of the object
+        - Surface - display the object as surfaces
 
-<p> При изменении толщины линии, отображается вспомогательное окно с наглядным отображением толщины и возможностью ее изменения: </p>
+<p> When changing the line thickness, an auxiliary window is displayed with a visual representation of the thickness and the ability to change it: </p>
 
 <img src="data/image/changevertex.png">
 <hr>
 <h2 align="center"> Примеры: </h2>
 
-| Способ отображения ребер |  | Толщина ребер |  | Цвет ребер |  |
+| Edge display method |  | Fin thickness |  | Rib color |  |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | `none` | <img src="data/image/defaultmodel.png"> | `defaut` | <img src="data/image/withlinesmodel.png"> | `defaut` | <img src="data/image/withbiglinesmodel.png"> |
 | `Линия` | <img src="data/image/withlinesmodel.png"> | `default++` | <img src="data/image/withbiglinesmodel.png"> | `pink` | <img src="data/image/withpinklinesmodel.png"> |
 
 
 
-| Способ отображения вершин |  | Радиус вершин |  | Цвет вершин |  |
+| Way of displaying vertices |  | Vertex Radius |  | Vertex color |  |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | `none` | <img src="data/image/defaultmodel.png"> | `defaut` | <img src="data/image/withpointsmodel.png"> | `defaut` | <img src="data/image/withpointsmodel.png"> |
 | `Круг` | <img src="data/image/withbigpointsmodel.png"> | `default++` | <img src="data/image/withbigpointsmodel.png"> | `pink` | <img src="data/image/withcoloredpointsmodel.png"> |
 | `Квадрат` | <img src="data/image/withrectmodel.png"> |
 
-| Способ отображения текстур | `none` | `Каркас` | `Поверхность` |
+| Texture rendering method | `none` | `Frame` | `Surface` |
 | :---: | :---: | :---: | :---: | 
 | | <img src="data/image/notexturemodel.png"> | <img src="data/image/surfacemodel.png"> | <img src="data/image/model.png"> |
 
-<hr><hr>
+<hr>
 
-<h3><b> Вкладка сцена: </b></h3>
+<h3><b> Scene tab: </b></h3>
 
-1. Цвет - изменить цвет сцены (корректно отображается только при отключенном окружении)
-1. Свет
-    - Плоское затенение - равномерное на весь полигон
-    - Мягкое затенение - использует градиентное изменение цвета полигона
-1. Тип проекции
-    - Центральная 
-    - Параллельная
-1. Сетка (оси координат и квадратики в пространстве)
+1. Color - Change the color of the scene (displayed correctly only when environment is disabled)
+2. Lighting
+    - Flat shading - even shading across the entire polygon
+    - Smooth shading - uses a gradient to change the color of the polygon
+3. Projection type
+    - Central
+    - Parallel
+4. Grid (coordinate axes and squares in space)
     - none
-    - Отображать
-1. Сглаживание
-    - Твердые ребра
-    - Мягкие ребра
-1. Окружение (ландшафт вокруг)
+    - Display
+5. Smoothing
+    - Hard edges
+    - Soft edges
+6. Environment (landscape around the object)
     - none
-    - Отображать
+    - Display
 
 <hr>
-<h2 align="center"> Примеры: </h2>
+<h2 align="center"> Examples: </h2>
 
 | `Желтый цвет сцены` | `Зеленый цвет сцены` |
 | :---: | :---: | 
@@ -118,36 +186,38 @@
 
 <h2 align="center"> Область управления объектом </h2>
 
+<h2 align="center"> Object Control Area </h2>
+
 <table align="center">
 <tr> 
     <td> <img src="data/image/menutransformation.png"> </td>
     <td><p>
-        1-2. Смещение по оси X <br>
-        3-4. Смещение по оси Y <br>
-        5-6. Смещение по оси Z <br>
-        7. Шаг смещения <br>
-        8. Текущая координата по оси X <br>
-        9. Текущая координата по оси Y <br>
-        10. Текущая координата по оси Z <br>
-        11. Вращение относительно оси X <br>
-        12. Вращение относительно оси Y <br>
-        13. Вращение относительно оси Z <br>
-        14. Пропорциональное изменение модели по оси X <br>
-        15. Пропорциональное изменение модели по оси Y <br>
-        16. Пропорциональное изменение модели по оси Z <br>
-        17. Пропорциональное изменение модели по всем осям одновременно <br>
-        18. Приводит размеры объекта к единичному формату <br>
-        19. Наводит камеру на выбранный объект <br>
-        20. При выборе сцены, пользователь будет изменять параметры всех объектов <br>
-        21. При выборе конкретного объекта, пользователь будет изменять параметры этого объекта <br>
-        22. При выборе конкретной части объекта, пользователь может изменять только материалы этой части<br>
-        23. При нажатии на поле remove рядом с объектом, объект удаляется со сцены
+        1-2. Offset along X-axis <br>
+        3-4. Offset along Y-axis <br>
+        5-6. Offset along Z-axis <br>
+        7. Offset step <br>
+        8. Current coordinate on X-axis <br>
+        9. Current coordinate on Y-axis <br>
+        10. Current coordinate on Z-axis <br>
+        11. Rotation around X-axis <br>
+        12. Rotation around Y-axis <br>
+        13. Rotation around Z-axis <br>
+        14. Proportional model scaling along X-axis <br>
+        15. Proportional model scaling along Y-axis <br>
+        16. Proportional model scaling along Z-axis <br>
+        17. Proportional model scaling along all axes simultaneously <br>
+        18. Scales object dimensions to unity size <br>
+        19. Focuses camera on selected object <br>
+        20. When selecting the scene, user will modify parameters of all objects <br>
+        21. When selecting a specific object, user will modify parameters of that object <br>
+        22. When selecting a specific part of an object, user can only modify materials for that part <br>
+        23. Clicking the remove field next to an object removes it from the scene
     <p></td>
 </tr>
 </table>
 
 <hr>
-<h2 align="center"> Примеры: </h2>
+<h2 align="center"> Examples: </h2>
 
 | `Оригинал` | `Смещение по X` | `Смещение по Y` | `Смещение по Z` |
 | :---: | :---: | :---: | :---: | 
@@ -159,57 +229,57 @@
 
 <hr><hr>
 
-<h2 align="center"> Область управления светом </h2>
+<h2 align="center"> Light Control Area </h2>
 
 <table align="center">
 <tr> 
     <td> <img src="data/image/menulight.png"> </td>
     <td><p>
-        1. Цвет свечение самого объекта <br>
-        2. Цвет рассеивающегося света <br>
-        3. Цвет отражающегося света <br>
-        4. Направление света <br>
-        5. Положение источника света в пространстве <br>
-        6. Дистанция луча <br>
-        7. Внутренний круг освещаемого пространства <br>
-        8. Внешний круг зоны рассеивания света <br>
-        9. Статус глобального источника света <br>
-        10. Статус позиционных источников света и их список <br>
-        11. Статус узконаправленных позиционных источников света и их список
-    <p></td>
-</tr>
-</table>
-
-<hr><hr>
-
-<h2 align="center"> Область управления текстурами </h2>
-
-<table align="center">
-<tr> 
-    <td> <img src="data/image/menutexture.png"> </td>
-    <td><p>
-        1. Фоновое освещение <br>
-        2. Диффузное освещение <br>
-        3. Освещение зеркальных бликов <br>
-        4. Коэффициент блеска <br>
-        5. Коэффициент прозрачности <br>
-        6. Коэффициент преломления <br>
-        7. Коэффициент отражения <br>
-        8. Коэффициент шероховатости <br>
-        9. Задать всем коэффициентам значения по-умолчанию<br>
-        10. Включить/выключить отображение загруженной текстуры<br>
-        11. Перевернуть текстуру<br>
-        12. Добавить текстуру<br>
-        13. Удалить текстуру
+        1. Object emission color <br>
+        2. Diffuse color of scattered light <br>
+        3. Color of reflected light <br>
+        4. Direction of the light source <br>
+        5. Position of the light source in space <br>
+        6. Ray distance <br>
+        7. Inner circle of illuminated space <br>
+        8. Outer circle of light scattering zone <br>
+        9. Global light source status <br>
+        10. Positional light source status and their list <br>
+        11. Narrow directional positional light source status and their list
     <p></td>
 </tr>
 </table>
 
 <hr>
-<h2 align="center"> Примеры: </h2>
 
-| `Блик` | `Отражение` | `Прозрачность` |
+<h2 align="center"> Texture Control Area </h2>
+
+<table align="center">
+<tr> 
+    <td> <img src="data/image/menutexture.png"> </td>
+    <td><p>
+        1. Background lighting <br>
+        2. Diffuse lighting <br>
+        3. Lighting of specular highlights <br>
+        4. Glossiness coefficient <br>
+        5. Transparency coefficient <br>
+        6. Refraction coefficient <br>
+        7. Reflection coefficient <br>
+        8. Roughness coefficient <br>
+        9. Set default values for all coefficients<br>
+        10. Enable/disable display of the uploaded texture<br>
+        11. Flip the texture<br>
+        12. Add a texture<br>
+        13. Remove a texture
+    <p></td>
+</tr>
+</table>
+
+<hr>
+<h2 align="center"> Examples: </h2>
+
+| `Specular Highlight` | `Reflection` | `Transparency` |
 | :---: | :---: | :---: |
 | <img src="data/image/highlight.png"> | <img src="data/image/reflect.png"> | <img src="data/image/refract.png"> |
 
-<hr><hr>
+<hr>

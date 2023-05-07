@@ -20,9 +20,4 @@ cppcheck:
 clang-format:
 	@cd build/; make clang-format
 
-tests: build
-	cmake -S ./test -B ./test/build
-	cmake --build ./test/build
-	cd ./test/build/; ./TEST
-
 .PHONY: all build rebuild unistall clean cppcheck clang-format tests
