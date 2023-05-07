@@ -16,7 +16,7 @@ class GlobalSetting {
     settings.setValue(param, value);
     settings.sync();
   }
-  static const bool haveSettings(const QString param) {
+  static bool haveSettings(const QString param) {
     QSettings settings{"Ajhin_team", "3D_viewer.v2"};
     return settings.contains(param);
   }

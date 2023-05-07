@@ -693,7 +693,7 @@ int EGifGCBToSavedExtension(const GraphicsControlBlock *GCB,
  The block should NOT be freed by the user (not dynamically allocated).
 ******************************************************************************/
 int
-EGifPutCode(GifFileType *GifFile, int CodeSize, const GifByteType *CodeBlock)
+EGifPutCode(GifFileType *GifFile, int CodeSize __attribute__((unused)), const GifByteType *CodeBlock)
 {
     GifFilePrivateType *Private = (GifFilePrivateType *)GifFile->Private;
 

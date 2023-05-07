@@ -110,7 +110,7 @@ void V3D_GL::initializeGL() {
   emit getSceneData();
 }
 
-void V3D_GL::resizeGL(int width, int height) {
+void V3D_GL::resizeGL([[maybe_unused]] int width, [[maybe_unused]] int height) {
   float ratio = (float)this->width() / (float)this->height();
   m_scene_->SetProjectionViewRatio(ratio);
 

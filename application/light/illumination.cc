@@ -3,13 +3,13 @@
 namespace s21 {
 Illumination::Illumination()
     : currentItem_{nullptr},
-      current_light_{"dirLight", 0},
       dirLights_{new QVector<QVariant>()},
       pointLights_{new QVector<QVariant>()},
       spotLights_{new QVector<QVariant>()},
       illumination_{{"dirLight", dirLights_},
                     {"pointLight", pointLights_},
-                    {"spotLight", spotLights_}}
+                    {"spotLight", spotLights_}},
+      current_light_{"dirLight", 0}
 
 {
   addLight("dirLight");
@@ -18,7 +18,7 @@ Illumination::Illumination()
 
 Illumination::~Illumination() {
   for (auto &it : illumination_) {
-    for (auto &item : *it) {
+    for ([[maybe_unused]] auto &item : *it) {
       RemoveLight(illumination_.key(it), 0);
     }
     delete it;
@@ -140,7 +140,7 @@ void Illumination::SetOuterCut(double value) {
   *GetLightInfo().value(".outerCutOff").value<float *>() = value;
 }
 
-const LightType Illumination::GetLightType() const { return light_type_; }
+LightType Illumination::GetLightType() const { return light_type_; }
 
 void Illumination::SetLightType(LightType type) { light_type_ = type; }
 

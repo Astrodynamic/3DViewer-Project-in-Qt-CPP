@@ -21,7 +21,7 @@ class Illumination : public QObject {
   bool HasItem(QString, int);
 
   int GetItemDistance();
-  const LightType GetLightType() const;
+  LightType GetLightType() const;
   void SetLightType(LightType type);
 
  private:

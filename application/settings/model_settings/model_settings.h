@@ -158,19 +158,19 @@ class ModelSettings : public GlobalSetting {
     return settings.value(param);
   }
 
-  const EdgeSetting GetEdgeSettings() const { return m_edge_; }
+  EdgeSetting GetEdgeSettings() const { return m_edge_; }
 
-  const VertexSetting GetVertexSettings() const { return m_vertex_; }
+  VertexSetting GetVertexSettings() const { return m_vertex_; }
 
-  const TextureSetting GetTextureSettings() const { return m_texture_; }
+  TextureSetting GetTextureSettings() const { return m_texture_; }
 
-  const TranslateSetting GetTranslateSettings() const { return m_translate_; }
+  TranslateSetting GetTranslateSettings() const { return m_translate_; }
 
-  const RotateSetting GetRotateSettings() const { return m_rotate_; }
+  RotateSetting GetRotateSettings() const { return m_rotate_; }
 
-  const ScaleSetting GetScaleSettings() const { return m_scale_; }
+  ScaleSetting GetScaleSettings() const { return m_scale_; }
 
-  const SurfaceType GetSurfaceSettings() const { return m_surface_; }
+  SurfaceType GetSurfaceSettings() const { return m_surface_; }
 
   void SetEdgeColor(const QColor color) { m_edge_.color = color; }
 

@@ -63,9 +63,9 @@ struct ModelInfo {
 
   void AddMeshFace(unsigned int count) { face_count += count; }
 
-  const unsigned int GetVerticeCount() const { return vertices_count; }
+  unsigned int GetVerticeCount() const { return vertices_count; }
 
-  const unsigned int GetFaceCount() const { return face_count; }
+  unsigned int GetFaceCount() const { return face_count; }
 };
 
 }  // namespace s21

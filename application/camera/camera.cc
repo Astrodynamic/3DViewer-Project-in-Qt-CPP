@@ -35,7 +35,7 @@ void Camera::ChangeFocus(QVector3D dir) {
   }
 }
 
-const float Camera::Angle2D(QVector2D v_1, QVector2D v_2) const {
+float Camera::Angle2D(QVector2D v_1, QVector2D v_2) const {
   float dot = QVector2D::dotProduct(v_1, v_2);
 
   float sqrt = qSqrt(v_1.lengthSquared() * v_2.lengthSquared());

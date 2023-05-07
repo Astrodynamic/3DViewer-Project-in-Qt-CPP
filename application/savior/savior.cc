@@ -2,7 +2,7 @@
 
 namespace s21 {
 
-Savior::Savior(V3D_GL *gl_parent, QWidget *parent)
+Savior::Savior(V3D_GL *gl_parent, [[maybe_unused]] QWidget *parent)
     : m_gl_parent_{gl_parent}, m_gif_flag_{false} {
   SetLifeTimer();
   PrepearToSave();
@@ -13,7 +13,7 @@ Savior::Savior(V3D_GL *gl_parent, QWidget *parent)
 
 Savior::~Savior() { m_gl_parent_ = nullptr; }
 
-void Savior::mousePressEvent(QMouseEvent *event) {
+void Savior::mousePressEvent([[maybe_unused]] QMouseEvent *event) {
   close();
   QString window_title("Save File " + file_format_);
   QString fileName = QFileDialog::getSaveFileName(
